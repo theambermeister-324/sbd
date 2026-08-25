@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Council — SbD Proposal Review</title>
+<style>
+  :root {
+    --bg: #FAF9F7;
+    --card: #FFFFFF;
+    --border: #E4E0DA;
+    --text: #2B2622;
+    --text-light: #6B645C;
+    --accent: #B8925A;
+    --accent-light: #F3EAD9;
+    --agree: #7A9B76;
+    --clash: #C1614A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { margin-bottom: 32px; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  h1 { font-size: 28px; margin: 0 0 12px; line-height: 1.25; }
+  .meta { color: var(--text-light); font-size: 14px; }
+
+  .question-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    color: var(--text-light);
+  }
+  .question-box strong { color: var(--text); }
+  .asks { margin: 10px 0 0; padding-left: 20px; }
+  .asks li { margin-bottom: 4px; }
+
+  section.verdict {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 8px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section.verdict h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 24px 0 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+  section.verdict h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+  section.verdict p, section.verdict li { font-size: 15.5px; }
+  section.verdict ul { padding-left: 20px; margin: 8px 0; }
+  .first-thing {
+    background: var(--accent-light);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 10px 0 20px;
+    font-size: 15.5px;
+  }
+
+  .spectrum {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .adv-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .adv-card .name { font-weight: 700; font-size: 13px; margin-bottom: 6px; }
+  .adv-card .picks { font-size: 11px; color: var(--text-light); line-height: 1.5; }
+  .pick-strong { color: var(--agree); font-weight: 600; }
+  .pick-blind { color: var(--clash); font-weight: 600; }
+
+  details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  summary {
+    cursor: pointer;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 14.5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  details[open] summary::after { content: "–"; }
+  details[open] summary { border-bottom: 1px solid var(--border); }
+  .details-body { padding: 16px 20px 20px; font-size: 14.5px; color: var(--text-light); white-space: pre-line; }
+  .details-body strong { color: var(--text); }
+
+  .section-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin: 32px 0 12px;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-light);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">LLM Council · 5 Advisors + Peer Review</div>
+    <h1>Senior by Design Proposal — Council Review</h1>
+    <div class="meta">Convened 2026-08-25</div>
+  </header>
+
+  <div class="question-box">
+    <strong>The question:</strong> a solo consultancy's 21-slide proposal to Senior By Design (a $19M-pipeline senior-living interior design firm, turning away work for the first time, 100% referral-driven). The council was asked for recommendations on:
+    <ul class="asks">
+      <li>UX/UI — cut to ≤15 slides while still landing problem → solution → why → so-what → next-steps</li>
+      <li>Making the deck read as polished, professional, and competitive</li>
+      <li>Adding two new engagement-model options: a T&amp;M contract, and a fractional W2 hire (12–18 months)</li>
+    </ul>
+  </div>
+
+  <section class="verdict">
+    <h2>Where the Council Agrees</h2>
+    <ul>
+      <li><strong>The hero metric is wrong.</strong> "6-8 hrs/week → 1 hr/week" nets to roughly $15-20K/year of recovered time against a $45K fee — a 2.5-year payback that undersells the deal. The council converged on leading instead with the <strong>disputed-approval / decision-documentation liability</strong> (clients denying sign-off on finishes months later, worst with "ESL") as the sharper, more provable, larger number — and noted it's currently the deck's strongest material, buried on slide 18.</li>
+      <li><strong>15 slides is easy, structurally.</strong> Three advisors independently landed on the same cuts: one ranked-pains problem slide instead of four, collapse the 6-slide Phase 1 block to 3 (as-is/to-be, timeline+owners, price), merge culture-protection and risk into one slide, and compress Phases 2-5 into a single overview slide.</li>
+      <li><strong>Insider language needs to go.</strong> "Train switch," "Quote-to-Cash Foundation," and the Phase 3-5 category labels ("Team Enablement," "Culture Integration") read as consultant-speak to anyone who wasn't on the discovery call.</li>
+      <li><strong>Offering 3 pricing options as equals reads as indecisive.</strong> Multiple advisors said lead with one recommended structure and show the alternatives as a comparison, not three co-equal choices.</li>
+      <li><strong>The Access database is an unpriced technical risk.</strong> It's custom-built and undocumented; fixed-bidding Phase 1 against it means eating 100% of any discovery overrun.</li>
+      <li><strong>Jimmy (the sole QuickBooks gatekeeper) is a named, unaddressed dependency.</strong> Phase 1 can't ship without his cooperation, and no slide currently accounts for that.</li>
+    </ul>
+
+    <h2>Where the Council Clashes</h2>
+    <p><strong>Does the fractional W2 belong in this deck at all?</strong> The Contrarian says kill it outright — standard W2 terms mean IP assignment (work-for-hire), at-will termination with no kill fee, and non-compete exposure in the exact vertical the consultant is building a practice in. The First Principles Thinker says it's not a pricing tier, it's a different life — either commit to embedding as the primary structure and lead with it, or drop it. The Expansionist called it the highest-upside option, on the theory that embedded payroll access unlocks referral introductions to SbD's own client portfolio. <em>This is a real disagreement, not just a hedge</em> — see below for how it resolved.</p>
+    <p><strong>Which dollar figure should be the deck's hero number:</strong> capacity/throughput (revenue currently being turned away) or liability (disputed-approval cost)? Both are stronger than hours-saved; the council didn't fully converge on which leads.</p>
+
+    <h2>Blind Spots the Council Caught</h2>
+    <p>The Expansionist's response — take the W2 <em>and</em> use the referral access to line up the consultant's next five deals <em>and</em> retain IP to license the resulting tooling back to SbD at $0 — was independently flagged as the single biggest blind spot by <strong>4 of the 5 peer reviewers</strong>. Two problems, both structural: standard employee IP-assignment terms make "retain and license back your own product" legally incoherent under a W2 in the first place, and using payroll access to solicit an employer's own client list is a conflict of interest serious enough to end the relationship if it surfaced. (Note: the one reviewer who defended this response was reviewing from the Expansionist's own lens and also rated the Expansionist's answer as strongest overall — a self-referential pattern that reduces how much independent weight that dissent carries.)</p>
+    <p>Peer review also surfaced what no individual advisor raised: the deck asks to look "competitive" but contains <strong>zero proof of prior delivery</strong> — no case study, no reference, no past client. Nobody has priced <strong>key-man risk</strong> (a solo operator building automation a growing firm will depend on). And critically: nobody has actually written down a loaded hourly rate, a T&amp;M range, or a W2 salary equivalent — the numeric inputs the requested comparison table can't exist without.</p>
+
+    <h2>The Recommendation</h2>
+    <p><strong>Don't put the fractional W2 into the deck as a peer option next to fixed-fee and T&amp;M.</strong> The council's most independently-replicated finding is that the version of this option worth having (embedded access, referral upside) only works with real restructuring — negotiated IP carve-outs, logo/case-study rights, a defined exit, explicit non-solicit terms — that hasn't happened yet. Pitching it as line 3 of a pricing table this week risks presenting a legally incoherent offer to a client who would notice.</p>
+    <p>Instead: present <strong>fixed-fee (current Phase 1 structure) and a capped T&amp;M option</strong> as the two real choices in the deck, with a clear recommendation between them. Treat the fractional W2 as a separate conversation to have with Glenn directly, after the legal/comp homework is done — not as deck content yet.</p>
+    <p>Reweight the deck around the decision-documentation/liability story as the lead value driver, cut to ~14 slides using the convergent structural plan above, and replace insider phrasing with plain descriptions. Before finalizing pricing, get real numbers: a loaded hourly rate with a not-to-exceed cap for T&amp;M, and quantify what disputed approvals have actually cost SbD historically.</p>
+
+    <h2>The One Thing to Do First</h2>
+    <p class="first-thing">Before touching the deck again: get Glenn on a short call and ask two questions — <strong>(1)</strong> "What did your last few disputed change orders actually cost you, in dollars — especially with ESL?" and <strong>(2)</strong> "Would you rather start with a paid two-week discovery (~$5-8K) that produces a real integration spec before any $45K commitment, or go straight to the full Phase 1 fixed bid?" Those two answers fix the deck's real hero metric and de-risk the Access-database unknown in one conversation — before any more slides get built.</p>
+  </section>
+
+  <div class="section-label">Advisor Alignment at a Glance</div>
+  <div class="spectrum">
+    <div class="adv-card">
+      <div class="name">Contrarian</div>
+      <div class="picks">Rated strongest <span class="pick-strong">2×</span> by peers<br>Never flagged as blind spot</div>
+    </div>
+    <div class="adv-card">
+      <div class="name">First Principles</div>
+      <div class="picks">Praised for reframe<br>Never flagged as blind spot</div>
+    </div>
+    <div class="adv-card">
+      <div class="name">Expansionist</div>
+      <div class="picks">Rated strongest <span class="pick-strong">1×</span> (self-lens)<br>Flagged as blind spot <span class="pick-blind">4×</span></div>
+    </div>
+    <div class="adv-card">
+      <div class="name">Outsider</div>
+      <div class="picks">Rated strongest <span class="pick-strong">1×</span><br>Never flagged as blind spot</div>
+    </div>
+    <div class="adv-card">
+      <div class="name">Executor</div>
+      <div class="picks">Rated strongest <span class="pick-strong">2×</span><br>Never flagged as blind spot</div>
+    </div>
+  </div>
+
+  <div class="section-label">Full Advisor Responses</div>
+
+  <details>
+    <summary>The Contrarian</summary>
+    <div class="details-body">The fractional W2 offer is the thing that can actually ruin you. Kill it. On payroll you get: IP assignment (their employee handbook will make every automation you build work-for-hire — you lose the reusable asset that lets you sell this same engagement to the next design firm), at-will termination with no notice or kill fee, non-solicit/non-compete exposure in the exact vertical you're trying to build a practice in, and Glenn's team treating you as headcount to reassign. You also hand SbD a payroll-tax and benefits headache administered by Jimmy — the person whose gatekeeping you're proposing to dismantle. Offer fractional-CTO-as-1099-retainer if you want recurring revenue. Do not sign a W-2 with a client under operational strain who might need to cut heads.
+
+Second flaw: your headline ROI doesn't clear your price. 6-8 hrs/week down to 1 hr/week is roughly $15-20K/year of recovered admin time against a $45K fee. Any competent buyer runs that math and sees a 2.5-year payback. Meanwhile you're sitting on the actual six-figure number and burying it in Phase 2: they are turning down work against $19M signed, and ESL is denying approvals they can't disprove. Lead with turned-down revenue and litigation-grade approval trails. Deposit reconciliation is a footnote, not a hero metric.
+
+Third: you fixed-bid an undocumented custom Access database. Who built it? Is there an API, or are you writing ODBC glue against a schema nobody has documented? Fixed fee on legacy unknowns means you eat 100% of discovery overrun.
+
+Fourth: Jimmy isn't a detail, he's the single point of failure. Phase 1 dies without QuickBooks credentials from the one person whose entire leverage is exclusive access. No slide addresses him.
+
+Fifth: they bought Monday.com and never used it. That's the reference class for this deal. Your risk slide should say so.</div>
+  </details>
+
+  <details>
+    <summary>The First Principles Thinker</summary>
+    <div class="details-body">You're optimizing a deck when the underlying deal isn't defined yet. Strip it down. SbD has $19M signed, no sales function, and is turning down work. They do not have a software integration problem. They have a throughput and liability problem, and every number in your deck measures the wrong thing.
+
+"Deposit reconciliation drops from 6-8 hrs/week to 1 hr" is roughly $15K/year of a bookkeeper's time. You're asking $45K. That math only works if Glenn is buying on faith. The real number is sitting in pain point #7. A client denies approving a ceiling detail; someone eats the rework. Ask Glenn, before you send anything: what did the last three disputed change orders cost you, and how many did ESL alone generate? If that's $200K/year, your Phase 2 is Phase 1 and the $45K is a rounding error.
+
+Second reframe: three commercial options is not generosity, it's a confession. Offering fixed-fee, T&M, and fractional W2 tells Glenn you don't know what this engagement is. Two options, maximum, with a recommendation.
+
+Third: the fractional W2 isn't a pricing model, it's a different life. Payroll means his HR policies, his IP assignment, his non-compete, his unemployment exposure — and single-client concentration for you at a firm already at operational breaking point. Don't price it as "option C." Either you believe embedding is the right structure and you lead with it, or it doesn't belong in the deck.
+
+Fifteen slides is achievable trivially once you stop selling five phases and start selling one quantified problem.</div>
+  </details>
+
+  <details>
+    <summary>The Expansionist</summary>
+    <div class="details-body">You are pricing a capacity problem like a bookkeeping problem. SbD is turning down work for the first time in 12 years against $19M signed. The deck's headline metric is "6-8 hrs/week down to 1 hr." That's a $15K story told to a firm whose real question is "how much of the work we're declining can we say yes to?" Reframe Phase 1's success metric as projects absorbed without headcount. One recovered new-build project likely dwarfs the entire $120-180K program. $45K is 0.24% of next year's signed revenue — you are underpriced, and underpricing reads as under-serious against competing vendors.
+
+The fractional W2 is the highest-upside option, and not for the reason you think. Embedded payroll access to a 100% referral-driven firm means access to the referral engine itself — 8-9 clients who are senior-living operators owning portfolios, not single buildings. Your next five deals are inside SbD's client list. Take the W2 at a lower cash rate in exchange for: named case-study and logo rights, a warm-intro clause, and retained IP ownership of anything generalizable.
+
+Phase 2 is a product, not a deliverable. "Decisions captured from call transcripts into a client-visible approval trail" solves the universal ESL problem for every design, architecture, and construction firm alive. Build it at SbD, own the IP, license it back at $0. You are being paid to build your own company's first product.
+
+Deck: collapse four problem slides into one — "the ceiling," with the turned-down-work number as the hero. Add the three-option comparison table. Competitiveness comes from showing you understand their growth math, not from more slides.</div>
+  </details>
+
+  <details>
+    <summary>The Outsider</summary>
+    <div class="details-body">I'm looking at this cold, and here's what a first-time reader hits. "Train switch" is the biggest problem in the deck. It's an insider metaphor from the discovery call. Glenn may remember it; his CFO reading the PDF alone won't. Same with "Quote-to-Cash Foundation" — that's consultant vocabulary for "when a job is approved, the invoice and the PO go out by themselves." Say that instead. Every phase name is currently a category label, not a promise. "Team Enablement," "Culture Integration," "Resource Planning" — I can't tell what any of those produce or why I'd pay for them.
+
+Phases 3-5 are unpriced, unscoped, and undated, but they're 4 of your 21 slides. To an outsider that reads as filler, or worse, as a hint that the real number is much larger than $45K and you're not saying it yet. Cut them to one slide. That alone gets you close to 15.
+
+The one number that matters is missing. You quantify hours saved but never dollars. $19M signed, turning away work — the outsider question is "what does the backlog cost us?" One slide with a defensible number for revenue currently unbookable, next to $45K, ends the pricing conversation.
+
+The approval-trail problem is your strongest slide and it's buried on slide 18. "A client denies approving the carpet, you eat the cost" is instantly legible to anyone. Move it into problem framing.
+
+On the three options: don't present three. An outsider reading three prices assumes you don't know what the job is worth. Lead with one recommendation, list the other two as a comparison row underneath.</div>
+  </details>
+
+  <details>
+    <summary>The Executor</summary>
+    <div class="details-body">The 21-slide deck already reads as a plan. What it doesn't have is a Monday. Cut to 14 by deleting the slides that describe rather than commit. Kill three of four problem-framing slides — Glenn lived the discovery call, he doesn't need his own pain read back four times. One slide: seven pains, ranked, with hours/week attached. Collapse the Phase 1 six-slide block to three: as-is/to-be diagram, 90-day timeline with named owners, price. Merge culture-protection and risk into one "how this doesn't blow up" slide. Phases 2-5 become a single slide — four boxes, one line each, no deep-dive. That's 14 with the commercial slide added.
+
+On the three models, only one has a real first step. T&M with no cap on a firm that's never bought this before is a slide Glenn's CFO uses to kill the deal — if you offer it, cap it and attach a not-to-exceed. Fractional W2 is the one you're least ready to execute: payroll setup, benefits eligibility, PTO, an employee handbook, workers' comp, and the fact that you can't invoice, can't subcontract, and can't walk in 30 days. Do not put it on the deck unless you have already priced your loaded hourly and asked Jimmy — who owns QuickBooks and therefore payroll — whether SbD can even add a part-time W2 without a state registration headache. That's a phone call this week, not a slide.
+
+The real Monday-morning move: Phase 1 is not a 90-day project, it's a two-week paid discovery ($5-8K) that produces the integration spec and the field-mapping doc. Sell that. It's a signature Glenn can give without a board conversation, it de-risks your $45K estimate, and if the Access schema is a mess you find out on day 9, not day 60.</div>
+  </details>
+
+  <div class="section-label">Peer Review Highlights</div>
+
+  <details>
+    <summary>All 5 peer reviews (strongest / blind spot / what everyone missed)</summary>
+    <div class="details-body"><strong>Reviewed from the Contrarian's lens</strong> — Strongest: Contrarian's own response (falsifiable specifics: Access schema risk, Jimmy, Monday.com precedent). Blind spot: Expansionist's response (mining the client's referral list while retaining IP is a conflict of interest dressed as upside). All missed: whether admin time is even the binding constraint, and who maintains the integrations after handoff.
+
+<strong>Reviewed from the First Principles lens</strong> — Strongest: Contrarian's response, for pairing the reframe with evidence. Blind spot: Expansionist's response, for the same referral-mining/IP conflict. All missed: the W2 option may be solving the consultant's income-stability problem more than SbD's, and nobody named an internal SbD owner to adopt anything (the same gap that killed the Monday.com attempt).
+
+<strong>Reviewed from the Expansionist's lens</strong> — Strongest: Expansionist's own response (asset-building framing). Blind spot: Contrarian's response (treats negotiable contract clauses as if they were fixed properties of W2 employment). All missed: the succession/enterprise-value angle — a $19M firm with undocumented operations is a candidate for outcome-linked pricing, not flat fees.
+
+<strong>Reviewed from the Outsider's lens</strong> — Strongest: Executor's response, for being the only one that answered all three original questions with concrete next steps. Blind spot: Expansionist's response (same conflict-of-interest read). All missed: zero proof of prior delivery anywhere in the deck, and no one raised key-man risk for a solo operator's client.
+
+<strong>Reviewed from the Executor's lens</strong> — Strongest: Executor's own response, for producing an actual Monday-morning action. Blind spot: Expansionist's response (W2 + IP retention are mutually exclusive under standard employment terms). All missed: nobody wrote down a loaded hourly rate or W2 salary equivalent, whether the deck is presented live or emailed cold, or a quote expiration date.</div>
+  </details>
+
+  <footer>
+    Council of 5 (Contrarian, First Principles Thinker, Expansionist, Outsider, Executor) + peer review + chairman synthesis.<br>
+    Full transcript: <code>council-transcript-20260825-proposal-review.md</code><br>
+    Subject: <code>decks/senior-by-design/</code> proposal deck, as of the 21-slide version committed 2026-08-25.
+  </footer>
+
+</div>
+</body>
+</html>
