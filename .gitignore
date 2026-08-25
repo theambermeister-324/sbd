@@ -2,3 +2,6 @@ node_modules/
 .obsidian/
 /.claude/settings.local.json
 /.mdbase/
+
+# Local Netlify folder
+.netlify
