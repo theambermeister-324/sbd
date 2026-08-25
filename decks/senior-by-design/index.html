@@ -336,6 +336,118 @@
   .risk-box h4 {
     color: var(--warm-gray);
   }
+
+  /* As-Is / To-Be workflow comparison */
+  .workflow-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 20px 0;
+  }
+
+  .workflow-col h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .workflow-step {
+    background: white;
+    border: 2px solid var(--warm-gray-light);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--text-dark);
+  }
+
+  .workflow-step--auto {
+    border-color: var(--warm-gold);
+    background: #FAF7F0;
+    font-weight: 600;
+    color: var(--warm-gray);
+  }
+
+  .workflow-arrow {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 13px;
+    margin: 6px 0;
+  }
+
+  .workflow-arrow--auto {
+    color: var(--warm-terra);
+  }
+
+  .workflow-tag {
+    font-style: italic;
+    margin-left: 4px;
+  }
+
+  .workflow-tag--auto {
+    color: var(--warm-terra);
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* Phase roadmap: compounding value over time */
+  .roadmap {
+    margin-top: 16px;
+    border-left: 3px solid var(--warm-gray-light);
+    padding-left: 28px;
+  }
+
+  .roadmap-row {
+    position: relative;
+    margin-bottom: 22px;
+  }
+
+  .roadmap-row::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--warm-gold);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--warm-gray-light);
+  }
+
+  .roadmap-phase {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--warm-gray);
+    font-size: 20px;
+  }
+
+  .roadmap-problem {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin: 4px 0 8px;
+    max-width: 640px;
+  }
+
+  .roadmap-value-label {
+    font-size: 13px;
+    color: var(--warm-terra);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .roadmap-value-bar-track {
+    background: var(--warm-gray-light);
+    border-radius: 4px;
+    height: 8px;
+    width: 240px;
+    overflow: hidden;
+  }
+
+  .roadmap-value-bar-fill {
+    background: var(--warm-gold);
+    height: 100%;
+  }
 </style>
 
 <div class="deck">
@@ -404,6 +516,39 @@
 
     <div class="callout">
       <p><strong>Culture Impact:</strong> Fewer firefighting cycles = more time for what your team loves. That's the real win.</p>
+    </div>
+  </div>
+
+  <!-- Slide 5b: As-Is / To-Be Workflow -->
+  <div class="slide slide--content">
+    <h2>The Workflow, Before and After</h2>
+    <p>Six phases, ~18 sub-steps, all manual today. Here's the same quote-to-cash path once one stage change routes everywhere.</p>
+
+    <div class="workflow-compare">
+      <div class="workflow-col">
+        <h4 style="color: var(--warm-gray);">As-Is: Manual at Every Handoff</h4>
+        <div class="workflow-step">Quote built in Access</div>
+        <div class="workflow-arrow">↓ <span class="workflow-tag">re-typed by hand</span></div>
+        <div class="workflow-step">Status re-entered in Smartsheet</div>
+        <div class="workflow-arrow">↓ <span class="workflow-tag">chase Jimmy weekly</span></div>
+        <div class="workflow-step">Deposit clears in QuickBooks—team can't see it</div>
+        <div class="workflow-arrow">↓ <span class="workflow-tag">manual PO, if remembered</span></div>
+        <div class="workflow-step">Order placed, client told whenever someone gets to it</div>
+      </div>
+      <div class="workflow-col">
+        <h4>To-Be: One Trigger, Every System</h4>
+        <div class="workflow-step workflow-step--auto">Quote built in Access</div>
+        <div class="workflow-arrow workflow-arrow--auto">↓ <span class="workflow-tag workflow-tag--auto">auto-sync</span></div>
+        <div class="workflow-step workflow-step--auto">Smartsheet + QuickBooks update themselves</div>
+        <div class="workflow-arrow workflow-arrow--auto">↓ <span class="workflow-tag workflow-tag--auto">auto-flag</span></div>
+        <div class="workflow-step workflow-step--auto">Deposit flagged the moment it clears</div>
+        <div class="workflow-arrow workflow-arrow--auto">↓ <span class="workflow-tag workflow-tag--auto">auto-trigger</span></div>
+        <div class="workflow-step workflow-step--auto">PO sent + client emailed, same day</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>The "Train Switch":</strong> one status change in Access routes the update everywhere it needs to go—no one has to remember to tell QuickBooks, or Smartsheet, or the client.</p>
     </div>
   </div>
 
@@ -598,6 +743,45 @@
     <div class="metric-card">
       <strong>Why It Holds Up With Your Toughest Accounts</strong>
       <p>No client adoption to manage means no client adoption to fail. The record exists whether or not they ever open a dashboard—so "we never approved that" stops being a fight you have to win after the fact.</p>
+    </div>
+  </div>
+
+  <!-- Slide 13c: Phase Roadmap / Compounding Value -->
+  <div class="slide slide--content">
+    <h2>How the Phases Compound</h2>
+    <p>Each phase solves a specific problem your team named—and each one makes the next phase more valuable, not just additive.</p>
+
+    <div class="roadmap">
+      <div class="roadmap-row">
+        <div class="roadmap-phase">Phase 1 · Quote-to-Cash Foundation</div>
+        <div class="roadmap-problem">Deposits stuck across three disconnected systems, 6–8 hrs/week lost to reconciliation.</div>
+        <div class="roadmap-value-label">Time back, cash moves faster</div>
+        <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 20%;"></div></div>
+      </div>
+      <div class="roadmap-row">
+        <div class="roadmap-phase">Phase 2 · Client Communication &amp; Decision Documentation</div>
+        <div class="roadmap-problem">Decisions made on calls and email vanish; sign-off gets disputed months later.</div>
+        <div class="roadmap-value-label">Approval trail builds itself, disputes drop</div>
+        <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 40%;"></div></div>
+      </div>
+      <div class="roadmap-row">
+        <div class="roadmap-phase">Phase 3 · Team Enablement</div>
+        <div class="roadmap-problem">Process knowledge lives in people's heads, not in a system anyone can query.</div>
+        <div class="roadmap-value-label">Team self-serves, fewer bottlenecks on you</div>
+        <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 60%;"></div></div>
+      </div>
+      <div class="roadmap-row">
+        <div class="roadmap-phase">Phase 4 · Resource Planning</div>
+        <div class="roadmap-problem">Growth to $19M is outpacing visibility into who has capacity for what.</div>
+        <div class="roadmap-value-label">Staffing keeps pace with the pipeline</div>
+        <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 80%;"></div></div>
+      </div>
+      <div class="roadmap-row">
+        <div class="roadmap-phase">Phase 5 · Culture Integration</div>
+        <div class="roadmap-problem">Automation risks feeling like it replaces the human, hands-on culture you've built.</div>
+        <div class="roadmap-value-label">Growth without burning out the team</div>
+        <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 100%;"></div></div>
+      </div>
     </div>
   </div>
 
