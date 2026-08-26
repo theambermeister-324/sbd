@@ -448,6 +448,26 @@
     background: var(--warm-gold);
     height: 100%;
   }
+
+  .compact-list {
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  .compact-list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+  }
+
+  .recommended-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--warm-gold);
+  }
 </style>
 
 <div class="deck">
@@ -459,87 +479,41 @@
     </div>
   </div>
 
-  <!-- Slide 2: The Pain -->
+  <!-- Slide 2: What's Actually Costing You (consolidated problem statement) -->
   <div class="slide slide--content">
-    <h2>The Current Reality</h2>
-    <p>Right now, deposit tracking lives across three disconnected systems. Access holds quoting, inventory, and finish-schedule data. Smartsheet tracks deposits. QuickBooks records transactions. No single view. No clear status. Manual reconciliation every week.</p>
-    <div class="metric-card">
-      <strong>Your Team Spends:</strong>
-      <div class="number">6–8 hours/week</div>
-      <p>Manually matching deposits, hunting missing data, firefighting discrepancies—work that should take 30 minutes.</p>
-    </div>
-    <div class="metric-card">
-      <strong>The Cost:</strong>
-      <div class="number">High friction</div>
-      <p>Decision paralysis. Double-work. Team frustration. Burned cycles that could go to growth, to people, to what makes Senior by Design special.</p>
-    </div>
-  </div>
-
-  <!-- Slide 3: It's Not Just Deposits -->
-  <div class="slide slide--content">
-    <h2>It's Not Just Deposits</h2>
-    <p>The reconciliation grind is the most visible symptom, but the same manual pattern repeats at every stage of every project.</p>
-
-    <div class="two-column">
-      <div class="column-box">
-        <h4>Double Entry, Every Time</h4>
-        <p>Client name, address, status—typed once in Access, then again in Smartsheet. Every single request.</p>
-      </div>
-      <div class="column-box">
-        <h4>No Auto-Trigger Downstream</h4>
-        <p>An approval doesn't tell QuickBooks to invoice or tell your vendor to cut a PO. Someone has to remember, every time.</p>
-      </div>
-    </div>
-    <div class="two-column">
-      <div class="column-box">
-        <h4>Naming That Doesn't Line Up</h4>
-        <p>Projects get informal names in one system ("TN-Nashville-Leo Brown") and legal entity names in contracts. Nothing cross-references cleanly.</p>
-      </div>
-      <div class="column-box">
-        <h4>60 Requests, No Formal Structure</h4>
-        <p>That many one-off and remodel jobs are active at any moment—with no timeline structure to track any of them.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Slide 3b: Decisions Get Lost, Too -->
-  <div class="slide slide--content">
-    <h2>Decisions Get Lost, Too</h2>
-    <p>It's not only internal systems. Client-facing communication has the same gap—just harder to see until it becomes a dispute.</p>
+    <h2>What's Actually Costing You</h2>
+    <p>Discovery surfaced seven problems. Two of them are already costing you money and relationships—not just time.</p>
 
     <div class="risk-box">
-      <h4>Designers Go Quiet</h4>
-      <p>Clients can go days or weeks without an update. Not because nothing's happening—because nobody remembered to say so. Clients follow up not knowing if their email even landed.</p>
+      <h4>Disputed Decisions, No Record</h4>
+      <p>A finish gets approved on a call. A ceiling detail gets signed off by email. Months later, a client denies it ever happened—and your team scrambles through inboxes to prove otherwise. It's worst with your most difficult accounts, and every dispute costs real time, real money, and real trust.</p>
     </div>
 
     <div class="risk-box">
-      <h4>No Record When It's Disputed</h4>
-      <p>A finish gets approved on a call. A ceiling detail gets signed off by email. Months later, a client denies ever approving it—and your team is scrambling through inboxes to prove otherwise.</p>
+      <h4>Turning Down Work, for the First Time Ever</h4>
+      <p>You're declining new business for the first time in 12 years—not for lack of demand, but because operations can't stretch further. With zero advertising and no sales team, every project you can't take on is revenue you're already leaving on the table against $19M signed for next year.</p>
     </div>
 
     <div class="callout">
-      <p><strong>This Is the Kind of Problem That Compounds:</strong> the tighter your quote-to-cash flow gets, the more visible—and more costly—these communication gaps become.</p>
+      <p><strong>Five More Problems Compound Both of These:</strong></p>
+      <ul class="compact-list">
+        <li>Deposits stuck across three disconnected systems—6–8 hrs/week lost to reconciliation</li>
+        <li>Every request typed twice: once in Access, again in Smartsheet</li>
+        <li>Approvals don't trigger anything downstream—someone has to remember to invoice or cut a PO</li>
+        <li>Designers go quiet for days or weeks; clients don't know if their emails landed</li>
+        <li>~60 one-off and remodel requests active at once, with no formal timeline structure</li>
+      </ul>
     </div>
   </div>
 
-  <!-- Slide 3c: Why It Matters -->
-  <div class="slide slide--content">
-    <h2>Why This Matters Now</h2>
-    <p>You're scaling to $19M. That growth can't happen while your team is drowning in manual reconciliation. The deposit bottleneck isn't just a systems problem—it's a culture problem. It burns people out. It steals time from human-centered work.</p>
-    <div class="callout">
-      <p><strong>The Real Constraint:</strong> You can scale operations without losing the human, fun, connected culture you've built. But not while your team is stuck firefighting deposits.</p>
-    </div>
-    <p style="margin-top: 32px;">You're turning down work for the first time ever—not for lack of demand, but because operations can't stretch further. And with zero advertising and no sales team, every client relationship you protect—or strain—directly shapes whether the next $19M shows up at all.</p>
-  </div>
-
-  <!-- Slide 3d: Phase Roadmap / Compounding Value (bridge to solution) -->
+  <!-- Slide 3: Phase Roadmap / Compounding Value (bridge to solution) -->
   <div class="slide slide--content">
     <h2>Here's How the Phases Fix It</h2>
     <p>Five phases, each solving a specific problem named above—and each one making the next phase more valuable, not just additive.</p>
 
     <div class="roadmap">
       <div class="roadmap-row">
-        <div class="roadmap-phase">Phase 1 · Quote-to-Cash Foundation</div>
+        <div class="roadmap-phase">Phase 1 · Connect Your Systems</div>
         <div class="roadmap-problem">Deposits stuck across three disconnected systems, 6–8 hrs/week lost to reconciliation.</div>
         <div class="roadmap-value-label">Time back, cash moves faster</div>
         <div class="roadmap-value-bar-track"><div class="roadmap-value-bar-fill" style="width: 20%;"></div></div>
@@ -577,35 +551,7 @@
     <p style="color: var(--warm-gray); font-size: 24px; margin-top: 20px;">90 days. $45K. Culture-first automation.</p>
   </div>
 
-  <!-- Slide 5: Phase 1 Success Metrics -->
-  <div class="slide slide--content">
-    <h2>Phase 1: What Success Looks Like</h2>
-    <p><strong>By day 90, your team will have:</strong></p>
-
-    <div class="metric-card">
-      <strong>Deposit Reconciliation Time</strong>
-      <div class="number">From 6–8 hrs → 1 hr/week</div>
-      <p>Access, Smartsheet, and QuickBooks sync automatically. One weekly review replaces daily firefighting.</p>
-    </div>
-
-    <div class="metric-card">
-      <strong>Data Visibility</strong>
-      <div class="number">100% real-time</div>
-      <p>Single dashboard shows deposit status across all three systems. No more hunting. No more confusion.</p>
-    </div>
-
-    <div class="metric-card">
-      <strong>Team Training Required</strong>
-      <div class="number">Zero new training</div>
-      <p>The system works behind the scenes. Your team's workflow doesn't change. They just have clarity.</p>
-    </div>
-
-    <div class="callout">
-      <p><strong>Culture Impact:</strong> Fewer firefighting cycles = more time for what your team loves. That's the real win.</p>
-    </div>
-  </div>
-
-  <!-- Slide 5b: As-Is / To-Be Workflow -->
+  <!-- Slide 5: As-Is / To-Be Workflow + Success Metrics -->
   <div class="slide slide--content">
     <h2>The Workflow, Before and After</h2>
     <p>Six phases, ~18 sub-steps, all manual today. Here's the same quote-to-cash path once one stage change routes everywhere.</p>
@@ -633,8 +579,23 @@
       </div>
     </div>
 
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="label">6–8 hrs → 1 hr</div>
+        <p>Reconciliation time, per week</p>
+      </div>
+      <div class="timeline-item">
+        <div class="label">100%</div>
+        <p>Real-time visibility across all three systems</p>
+      </div>
+      <div class="timeline-item">
+        <div class="label">Zero</div>
+        <p>New training required for your team</p>
+      </div>
+    </div>
+
     <div class="callout">
-      <p><strong>The "Train Switch":</strong> one status change in Access routes the update everywhere it needs to go—no one has to remember to tell QuickBooks, or Smartsheet, or the client.</p>
+      <p><strong>One Change, Every System Updated:</strong> a single status change in Access routes the update everywhere it needs to go—no one has to remember to tell QuickBooks, or Smartsheet, or the client.</p>
     </div>
   </div>
 
@@ -723,55 +684,31 @@
     </div>
   </div>
 
-  <!-- Slide 9: Section Divider -->
-  <div class="slide slide--accent">
-    <h1>Why Phase 1 Works</h1>
-    <p style="color: var(--warm-gray); font-size: 22px; margin-top: 20px;">Self-contained. Low risk. Culture-aligned.</p>
-  </div>
-
-  <!-- Slide 10: Why This Works for You -->
+  <!-- Slide 9: How This Doesn't Blow Up (culture + risk, merged) -->
   <div class="slide slide--content">
-    <h2>How This Protects Your Culture</h2>
+    <h2>How This Doesn't Blow Up</h2>
+    <p style="color: var(--text-light); font-size: 16px; margin-top: -12px;">Self-contained. Low risk. Culture-aligned.</p>
 
     <div class="callout">
-      <p><strong>Tighter workflows = less chaos.</strong> Right now, your team firefights deposits. That's exhausting. Automation removes the chaos, not the people.</p>
-    </div>
-
-    <p style="margin-top: 32px;"><strong>More time for what matters:</strong> Once deposits reconcile automatically, your team has hours back each week. Hours they can spend on what makes your firm special—human connection, relationship depth, culture.</p>
-
-    <div class="metric-card">
-      <strong>The Real Outcome</strong>
-      <div class="number">Sustainable scaling</div>
-      <p>You hit $19M without burning people out. You keep the fun, the human-first approach, the culture that makes you different. Growth and culture aren't in conflict—this proves it.</p>
+      <p><strong>Tighter workflows = less chaos.</strong> Right now, your team firefights deposits. That's exhausting. Automation removes the chaos, not the people—and it means you hit $19M without burning people out.</p>
     </div>
 
     <div class="risk-box">
       <h4>Will This Feel Like Job Loss?</h4>
       <p><strong>No.</strong> People stop doing grunt work. They do higher-value work. Your operations person becomes your growth strategist. That's a promotion, not a threat. We'll make that transition clear.</p>
     </div>
-  </div>
-
-  <!-- Slide 11: The Risk -->
-  <div class="slide slide--content">
-    <h2>What Could Go Wrong (And How We Mitigate)</h2>
 
     <div class="risk-box">
-      <h4>Risk: Timeline Misses</h4>
-      <p><strong>If it happens:</strong> We pause launch, not quality. Better to land solid than rush. You'll know weekly where we stand.</p>
-    </div>
-
-    <div class="risk-box">
-      <h4>Risk: Data Integrity Issues</h4>
-      <p><strong>If it happens:</strong> We audit and fix before go-live. No surprises. Parallel-run the old system for 2 weeks if needed for safety.</p>
-    </div>
-
-    <div class="risk-box">
-      <h4>Risk: Team Adoption Friction</h4>
-      <p><strong>If it happens:</strong> We pair documentation with live training. Weekly check-ins for first month. Support call-in any time.</p>
+      <h4>If Something Goes Wrong</h4>
+      <ul class="compact-list">
+        <li><strong>Timeline slips</strong> — we pause the launch, not the quality. You'll know weekly where we stand.</li>
+        <li><strong>Data issues surface</strong> — we audit and fix before go-live, with a 2-week parallel-run safety net if needed.</li>
+        <li><strong>Adoption friction</strong> — live training plus weekly check-ins for the first month.</li>
+      </ul>
     </div>
 
     <div class="callout">
-      <p><strong>Why We Don't Hide Risk:</strong> You're protective of your team and culture for good reason. We respect that. We'll be honest about challenges, not gloss over them.</p>
+      <p><strong>Why We Don't Hide Risk:</strong> You're protective of your team and culture for good reason. We respect that.</p>
     </div>
   </div>
 
@@ -789,7 +726,7 @@
 
     <div class="metric-card">
       <strong>Phase 2: Client Communication &amp; Decision Documentation</strong>
-      <p>Automated stage-change emails to clients—approvals, deposits, what's next. Every design decision (finishes, carpet, ceiling details) logged with a client-visible approval trail, so sign-off is never a dispute months later. Rules-based follow-up flags it if a designer hasn't responded in 3 days.</p>
+      <p>Automated stage-change emails to clients. Every design decision—finishes, carpet, ceiling details—captured straight from call transcripts and email into a client-visible approval trail. No new tool for clients to adopt (a shared board only works if they log in—yours didn't). Rules-based follow-up flags it if a designer hasn't responded in 3 days.</p>
     </div>
 
     <div class="metric-card">
@@ -809,26 +746,6 @@
 
     <div class="callout">
       <p><strong>Each phase is optional. Priced separately. Your call.</strong> Phase 1 works completely on its own.</p>
-    </div>
-  </div>
-
-  <!-- Slide 13b: Decision Documentation Deep-Dive -->
-  <div class="slide slide--content">
-    <h2>Where Decisions Actually Happen</h2>
-    <p>We named this already: decisions made on a call or in an email thread, with no record when a client disputes them months later. Here's specifically how we close that gap for your toughest accounts.</p>
-
-    <div class="risk-box">
-      <h4>What Doesn't Work: Asking the Client to Adopt Your Tool</h4>
-      <p>Building a shared board and inviting a difficult client to log in rarely sticks. You end up paying for licenses nobody uses, and the decision trail is exactly as thin as before—just with an extra bill attached.</p>
-    </div>
-
-    <div class="callout">
-      <p><strong>What We're Proposing Instead:</strong> Capture decisions where they already happen. Call transcripts and email threads feed straight into your system of record—timestamped, tied to the right project, no new login required. The approval trail builds itself, whether your client works in Smartsheet, their own PM tool, or nothing at all.</p>
-    </div>
-
-    <div class="metric-card">
-      <strong>Why It Holds Up With Your Toughest Accounts</strong>
-      <p>No client adoption to manage means no client adoption to fail. The record exists whether or not they ever open a dashboard—so "we never approved that" stops being a fight you have to win after the fact.</p>
     </div>
   </div>
 
@@ -874,6 +791,38 @@
     </div>
 
     <p style="margin-top: 32px; font-size: 16px; color: var(--text-light);"><em>No long-term lock-in. No seat licenses. Just results.</em></p>
+  </div>
+
+  <!-- Slide: Engagement Models -->
+  <div class="slide slide--content">
+    <h2>Choose Your Structure</h2>
+    <p>Two ways to work together, depending on how you want to structure this.</p>
+
+    <div class="two-column">
+      <div class="column-box">
+        <span class="recommended-tag">Recommended</span>
+        <h4>Fixed-Fee, Phased</h4>
+        <p>Exactly what's outlined above: $45K for Phase 1, with each later phase scoped and priced separately before you commit. You know the number before work starts, and nothing moves forward without your sign-off.</p>
+        <ul>
+          <li>Predictable cost per phase</li>
+          <li>No surprises mid-project</li>
+          <li>You approve scope before every phase</li>
+        </ul>
+      </div>
+      <div class="column-box">
+        <h4>Time &amp; Materials, Capped</h4>
+        <p>Billed against actual hours at an agreed rate, with a not-to-exceed cap set before work begins. A fit if scope is likely to shift once we're inside the Access database.</p>
+        <ul>
+          <li>Pay for actual hours, not a flat estimate</li>
+          <li>Cap protects you from runaway cost</li>
+          <li>Best when scope is still being discovered</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Our Recommendation:</strong> Start fixed-fee for Phase 1—the scope is well-understood. If later phases involve more discovery-as-we-go, a capped T&amp;M structure may fit better there.</p>
+    </div>
   </div>
 
   <!-- Slide 15: The Ask -->
